@@ -1,0 +1,14 @@
+---
+layout: default
+title: Emacs Lisp 简明教程
+---
+
+<h3 class="post-title">{{ page.title }}</h3>
+
+<p>emacs 的高手不能不会 elisp。但是对于很多人来说 elisp 学习是一个痛苦的历程，至少我是有这样一段经历。因此，我写了这一系列文章，希望能为后来者提供一点捷径。</p>
+
+<ul>
+{% for post in site.categories.elispintro reversed %}
+<ol><a href="{{ post.url }}">{{ post.title }}</a></ol>
+{% endfor %}
+</ul>

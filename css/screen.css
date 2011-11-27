@@ -439,7 +439,7 @@ height: 1%;
 display: block;
 }
 body {
-font: 11px/165% 'Lucida Grande', Verdana, Helvetica, sans-serif;
+font: 12px/165% 'Lucida Grande', Verdana, Helvetica, sans-serif;
 color: #666666;
 margin: 0;
 background: #F6F5F5; 
@@ -491,12 +491,15 @@ img.float-left {
 margin: 5px 10px 10px 0px;
 }
 code {
+font: 1.1em/1.5em 'Lucida Console', 'Courier New', Monospace ;
+}
+pre{
 margin: 3px 0;
 padding: 15px;
 text-align: left;
 display: block;
 overflow: auto;
-font: 500 1em/1.5em 'Lucida Console', 'Courier New', Monospace ;
+font: 1em/1.5em 'Lucida Console', 'Courier New', Monospace ;
 /* white-space: pre; */
 border: 1px solid #F0F0F0;
 background: #f8f8f8;
@@ -707,6 +710,15 @@ color: #000; border: none;
 }
 .post-body {
 padding:0px 15px;
+}
+.post-nav {
+margin: 10px 0;
+}
+.post-nav a.prev{
+    float: left;
+}
+.post-nav a.next{
+    float: right;
 }
 .post-footer {
 padding: 5px;

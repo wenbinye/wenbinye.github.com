@@ -1,15 +1,17 @@
 ---
 layout: default
 ---
-<h3 class="post-title">{{ page.title }}</h3>
+<h1 class="post-title">{{ page.title }}</h1>
 <div class="post-header">
-  <span class="post-timestamp"><abbr class="published" title="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d %A" }}</abbr></span> |
-  <span class="post-labels">
+  <span class="post-timestamp"><abbr class="published" title="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d %A" }}</abbr></span>
+  {% if page.tags != empty %}
+  | <span class="post-labels">
     Tags:
     {% for tag in page.tags %}
     <a href="/{{ tag }}.html">{{ tag }}</a>
     {% endfor %}
   </span>
+  {% endif %}
 </div>
 <div class="post-body">
 {{ content }}
