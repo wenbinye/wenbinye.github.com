@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>{{ page.title }}</title>
+    <meta name="author" content="Ye Wenbin" />
+    <link rel="stylesheet" href="/css/screen.css" type="text/css" />
+  </head>
+
+  <body>
+
+    <div id="header">
+      <div id="header-inner">
+        <div id="nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- content begin -->
+    <div id="content">
+      <div class="container_16" id="content-inner">
+        <!-- post start -->
+        <div class="grid_11" id="main">
+    {{ content }}
+        </div>
+        <!-- post end -->
+        <!-- sidebar start -->
+        <div class="grid_5" id="sidebar">
+          <div class="widget">
+            <h2>ARTICLES</h2>
+			<ul>
+			  {% for tag in site.tags %}
+			  <li><a href="/{{ tag[0]  }}.html"> {{ tag[0]  }}</a></li>
+			  {% endfor %}
+			</ul>
+          </div>
+          <div class="widget">
+            <h2>CONTACT ME</h2>
+            <ul>
+              <li>EMAIL: <a href="mailto:wenbinye@gmail.com">wenbinye@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- sidebar end -->
+      </div>
+    </div>
+    <!-- content end -->
+    <!-- footer start -->
+    <div id="footer">
+      <p>Copyright &copy; 2011 <a href="/">Ye Wenbin</a></p>
+    </div>
+    <!-- footer end -->
+<!-- Google Analytics START -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27324243-1']);
+  _gaq.push(['_setDomainName', 'github.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- Google Analytics END -->
+  </body>
+</html>

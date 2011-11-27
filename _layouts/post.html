@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<h3 class="post-title">{{ page.title }}</h3>
+<div class="post-header">
+  <span class="post-timestamp"><abbr class="published" title="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d %A" }}</abbr></span> |
+  <span class="post-labels">
+    Tags:
+    {% for tag in page.tags %}
+    <a href="/{{ tag }}.html">{{ tag }}</a>
+    {% endfor %}
+  </span>
+</div>
+<div class="post-body">
+{{ content }}
+</div>
+<div class="post-footer">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://wenbinye.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
