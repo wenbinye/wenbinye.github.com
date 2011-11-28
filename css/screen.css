@@ -713,11 +713,18 @@ padding:0px 15px;
 }
 .post-nav {
 margin: 10px 0;
+list-style: none;
 }
-.post-nav a.prev{
+.post-nav .prev{
     float: left;
+    width: 33%;
 }
-.post-nav a.next{
+.post-nav .top{
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+.post-nav .next{
     float: right;
 }
 .post-footer {
