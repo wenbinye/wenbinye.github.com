@@ -7,7 +7,7 @@ use File::Basename;
 use Data::Dumper qw(Dumper);
 use FindBin qw($Bin);
 
-my $category = shift;
+my $category = shift || die "Usage: $0 category\n";
 my $dir = $Bin.'/../'.$category.'/_posts/';
 if ( !-d $dir ) {
     die "Category '$category' not exists!\n";
@@ -34,8 +34,8 @@ for my $i( 1..$#sort_files ) {
             print {$out} <<EOF;
 <ul class="post-nav clearfix">
 <li class="prev">$prev</li>
-<li class="top"><a href="/$category/">Top</a><li>
-<li class="next">$next<li>
+<li class="top"><a href="/$category/">Top</a></li>
+<li class="next">$next</li>
 </ul>
 EOF
             last;
