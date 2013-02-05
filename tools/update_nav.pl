@@ -44,4 +44,5 @@ EOF
     }
     close($out);
     rename($file.'.bak', $file);
+    print "Update $file\n";
 }
