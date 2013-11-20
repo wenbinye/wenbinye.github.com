@@ -64,8 +64,8 @@ tags:
     method valid called
 
 总结：
-  - rewind 用于初始化迭代器
-  - valid 在 rewind 和 next 之后调用，current 之前调用
-  - current 用于获取当前值
-  - key 用于获取当前 key
-  - next 用于获取下个值
+- rewind 用于初始化迭代器
+- valid 在 rewind 和 next 之后调用，current 之前调用
+- current 用于获取当前值
+- key 用于获取当前 key
+- next 用于获取下个值
